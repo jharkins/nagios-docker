@@ -87,5 +87,5 @@ define service {
 9. Restart Nagios on the monitoring server:
 
 ```
-service nagios restart
+service nagios3 restart
 ```
