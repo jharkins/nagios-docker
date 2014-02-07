@@ -44,7 +44,7 @@ def test_docker():
     """ Test if the docker command exists """
 
     try:
-        subprocess.Popen(['docker'], stdout=subprocess.PIPE,
+        subprocess.Popen(['/usr/bin/docker'], stdout=subprocess.PIPE,
                          stderr=subprocess.PIPE)
     except OSError:
         critical("docker command not found")
@@ -53,7 +53,8 @@ def test_docker():
 def get_docker_info():
     """ get the information from `docker info` """
 
-    d_process = subprocess.Popen(['docker', 'info'], stdout=subprocess.PIPE,
+    d_process = subprocess.Popen(['/usr/bin/docker', 'info'],
+                                 stdout=subprocess.PIPE,
                                  stderr=subprocess.PIPE)
 
     # interact with `docker info`
