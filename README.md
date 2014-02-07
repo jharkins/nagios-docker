@@ -33,11 +33,11 @@ directories. Your environment may be different.
 
 4. Add docker_status command to NRPE config on client host:
 
-Add:
+    Add:
 
         command[docker_status]=/usr/lib/nagios/plugins/docker_socket.py
 
-to file **/etc/nagios/nrpe.cfg**
+    to file **/etc/nagios/nrpe.cfg**
 
 5. Add nagios to docker group so the plugin, running as nagios, can access the
 docker socket:
@@ -50,7 +50,7 @@ docker socket:
 
 7. Add the docker_status command to the Nagios monitoring server:
 
-Define docker_status command in **/etc/nagios3/objects/commands.cfg**
+    Define docker_status command in **/etc/nagios3/objects/commands.cfg**
 
         define command{
             command_name    docker_status
@@ -59,7 +59,7 @@ Define docker_status command in **/etc/nagios3/objects/commands.cfg**
 
 8. Add the docker_status check for the client server on the monitoring server:
 
-Add the following to **/etc/nagios3/conf.d/<server>.cfg**:
+    Add the following to **/etc/nagios3/conf.d/<server>.cfg**:
 
         define service {
             use                             generic-service
