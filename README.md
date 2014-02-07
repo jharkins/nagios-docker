@@ -21,7 +21,9 @@ directories. Your environment may be different.
 
 1. Get the repository:
 
-> git clone https://github.com/jharkins/nagios-docker.git
+```
+git clone https://github.com/jharkins/nagios-docker.git
+```
 
 2. Copy the docker_socket.py file into nagios plugin directory:
 
